@@ -1,0 +1,41 @@
+<mat-nav-list>
+   <div class="profile-card">
+      <div class="header">
+         <h2>Shiba Inu</h2>
+         <h4>Dog Breed</h4>
+      </div>
+      <img mat-card-image
+           src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+           alt="Photo of a Shiba Inu">
+   </div>
+
+
+   <mat-divider></mat-divider>
+
+   <h2 matSubheader>Pages</h2>
+
+
+   <a mat-list-item
+      routerLinkActive="list-item-active"
+      routerLink="/">{{'Dashboard' | translate}}</a>
+   <a mat-list-item
+      routerLinkActive="list-item-active"
+      routerLink="/posts">{{'Services' | translate}}</a>
+   <a mat-list-item
+      routerLinkActive="list-item-active"
+      routerLink="/users">{{'Users' | translate}}</a>
+
+
+   <mat-divider></mat-divider>
+
+   <h2 matSubheader>{{'Pages' | translate}}</h2>
+
+   <a mat-list-item
+      routerLinkActive="list-item-active"
+      routerLink="/">
+      <mat-icon>import_contacts</mat-icon>
+      {{'Contacts' | translate}}
+   </a>
+
+
+</mat-nav-list>
