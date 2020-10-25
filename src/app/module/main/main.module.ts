@@ -6,16 +6,18 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { LoginComponent } from './components/login/login.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { FontawesomeComponent } from './components/fontawesome/fontawesome.component';
+import { TypesComponent } from './components/types/types.component';
+import { NgrxComponent } from './components/ngrx/ngrx.component';
 
 
 
 @NgModule({
-  declarations: [MainComponent, LoginComponent, FontawesomeComponent],
+  declarations: [MainComponent, LoginComponent, FontawesomeComponent, TypesComponent, NgrxComponent],
   imports: [
     CommonModule,
     SharedModule,
     MaterialModule
   ],
-  exports: [MainComponent, LoginComponent, FontawesomeComponent]
+  exports: [MainComponent, LoginComponent, FontawesomeComponent, TypesComponent, NgrxComponent]
 })
 export class MainModule { }

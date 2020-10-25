@@ -4,10 +4,6 @@
             (click)="toogleSideBar()">
       <mat-icon>menu</mat-icon>
     </button>
-    <img src="assets/favicon.ico"
-         alt=""
-         height="40px"
-         width="40px">
 
     <div fxFlex
          fxLayout="row"
@@ -27,24 +23,21 @@
 
 
         </li>
-        <li>
-          <button mat-icon-button>
-            <mat-icon>settings</mat-icon>
-          </button>
-        </li>
-        <li>
-          <button mat-icon-button>
-            <mat-icon>help_outline</mat-icon>
-          </button>
-        </li>
-        <li>
+
+        <li *ngIf="(user$ | async)?.username">
           <button mat-button
                   [matMenuTriggerFor]="menu">
-            <mat-icon>person_outline</mat-icon>
+            <mat-icon fontSet="fa"
+                      class="md-24"
+                      fontIcon="fa-user"></mat-icon>
+            <span>{{(user$ | async)?.username}}</span>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>exit_to_app</mat-icon>
+            <button mat-menu-item
+                    (click)="onLogout()">
+              <mat-icon fontSet="fa"
+                        class="md-24"
+                        fontIcon="fa-sign-out"></mat-icon>
               <span>{{'Sign out' | translate}}</span>
             </button>
           </mat-menu>

@@ -9,6 +9,7 @@
       <mat-form-field fxFlex="100">
         <mat-icon matPrefix
                   fontSet="fa"
+                  class="md-24"
                   fontIcon="fa-user"></mat-icon>
 
         <mat-label>&nbsp;Username</mat-label>
@@ -19,6 +20,7 @@
       <mat-form-field fxFlex="100">
         <mat-icon matPrefix
                   fontSet="fa"
+                  class="md-24"
                   fontIcon="fa-lock"></mat-icon>
 
         <mat-label>&nbsp;Password</mat-label>
@@ -30,10 +32,12 @@
                 (click)="changeProperty($event)">
           <mat-icon [fxShow]="!hidePassword"
                     fontSet="fa"
+                    class="md-24"
                     fontIcon="fa-eye-slash"></mat-icon>
 
           <mat-icon [fxShow]="hidePassword"
                     fontSet="fa"
+                    class="md-24"
                     fontIcon="fa-eye"></mat-icon>
         </button>
       </mat-form-field>
