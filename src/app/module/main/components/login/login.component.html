@@ -1,0 +1,48 @@
+<mat-card fxFlex="50">
+  <mat-card-header fxLayoutAlign="center center">
+    <mat-card-title>Simple Login Form</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form fxLayout="row wrap"
+          [formGroup]="loginForm">
+      <mat-form-field fxFlex="100">
+        <mat-icon matPrefix
+                  fontSet="fa"
+                  fontIcon="fa-user"></mat-icon>
+
+        <mat-label>&nbsp;Username</mat-label>
+        <input matInput
+               formControlName="username">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="100">
+        <mat-icon matPrefix
+                  fontSet="fa"
+                  fontIcon="fa-lock"></mat-icon>
+
+        <mat-label>&nbsp;Password</mat-label>
+        <input matInput
+               formControlName="password"
+               [type]="hidePassword ? 'password' : 'text'">
+        <button mat-icon-button
+                matSuffix
+                (click)="changeProperty($event)">
+          <mat-icon [fxShow]="!hidePassword"
+                    fontSet="fa"
+                    fontIcon="fa-eye-slash"></mat-icon>
+
+          <mat-icon [fxShow]="hidePassword"
+                    fontSet="fa"
+                    fontIcon="fa-eye"></mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button
+            (click)="onSubmit(loginForm.value)"
+            color="primary">Login</button>
+  </mat-card-actions>
+</mat-card>

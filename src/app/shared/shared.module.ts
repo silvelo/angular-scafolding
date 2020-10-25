@@ -9,19 +9,25 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, SidebarComponent],
+  declarations: [
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,
     HttpClientModule,
     FlexLayoutModule,
     MaterialModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -31,11 +37,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   exports: [
+    /* MODULES */
+    MaterialModule,
+    TranslateModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    /* COMPONENTS */
     FooterComponent,
     HeaderComponent,
-    SidebarComponent,
-    MaterialModule,
-    TranslateModule
+    SidebarComponent
   ],
 })
 export class SharedModule { }

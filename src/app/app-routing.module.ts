@@ -1,11 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DefaultComponent } from './layouts/default/default.component';
+import { FontawesomeComponent } from './module/main/components/fontawesome/fontawesome.component';
+
+import { LoginComponent } from './module/main/components/login/login.component';
+import { MainComponent } from './module/main/main.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: DefaultComponent
+    component: MainComponent
+  },
+  {
+    path: 'fontawesome',
+    component: FontawesomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

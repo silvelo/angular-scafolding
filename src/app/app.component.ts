@@ -11,6 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
 
+  public sideBarOpen = true;
 
   constructor(
     private matIconRegistry: MatIconRegistry,
@@ -21,8 +22,9 @@ export class AppComponent {
     this.translateService.use('es');
     this.matIconRegistry.addSvgIcon('es-flag', this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/flags/es.svg'));
     this.matIconRegistry.addSvgIcon('en-flag', this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/flags/en.svg'));
-
-
   }
 
+  sideBarToogle() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 }
