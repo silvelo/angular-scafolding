@@ -34,7 +34,15 @@ Change the base-href for your website and edit ouputPath from `angular.json` if 
 ```
 "outputPath": "dist/angular-scafolding"
 ```
+## i18n
+Execute the script to create the json with strings
+```
+npm run i18n:init
+```
 
+In the `assets` folder search `template.json` and rename to your language. Then edit file to complete the translate. To change between languages only need to set the json filename in your available language list.
+
+This repo configure two languages Spanish and English (es.json, en.json) to change between them only set `es` or `en` on the avalaible list. Check it in `header.component.ts`
 
 ### Fontawosome Icons
 

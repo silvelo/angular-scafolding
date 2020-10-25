@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FontawesomeComponent } from './module/main/components/fontawesome/fontawesome.component';
+import { I18nComponent } from './module/main/components/i18n/i18n.component';
 
 import { LoginComponent } from './module/main/components/login/login.component';
 import { NgrxComponent } from './module/main/components/ngrx/ngrx.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'types',
     component: TypesComponent
+  },
+  {
+    path: 'i18n',
+    component: I18nComponent
   },
   {
     path: 'ngrx',
