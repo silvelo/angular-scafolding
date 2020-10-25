@@ -16,10 +16,22 @@ cd angular-scafolding
 npm run install
 ```
 
-## TODO:
+## Start app
+```
+npm run start
+```
 
-* Ngrx
-* Fontawosome
+## Deploy app
+To deploy app remember change the deploy command in `package.json`:
+
+```
+"deploy": "ng build --prod --base-href='https://angular-scafolding.silvelo.com'"
+```
+
+Change the base-href for your website and edit ouputPath from `angular.json` if you want to change the output folder:
+```
+"outputPath": "dist/angular-scafolding"
+```
 
 
 ### Fontawosome Icons
