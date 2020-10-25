@@ -7,6 +7,8 @@ Basic scafolding for angular:
 * i18n (@ngx-translate and @biesbjerg/ngx-translate-extract)
 * Angular Material
 * Flex
+* Ngrx
+* Fontawesome
 
 ## Download and Install
 
